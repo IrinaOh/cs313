@@ -1,7 +1,24 @@
-<p>Purchased products:</p><br>
+<?php session_start(); ?>
 <?php
-  foreach ($products as $p){
-    print "$products[$p] <br />";
+  $street = $_SESSION["street"];
+  $city = $_SESSION["city"];
+  $zip = $_SESSION["zip"];
+?>
+<p>Purchased products:</p><br>
+	<?php
+		$productsDB = array("001"=>"Product 1",
+							"002"=>"Product 2",
+							"003"=>"Product 3");
+		foreach ($continents as $c){
+			print "$continentsDB[$c] <br />";
+		}
+	?>
+</p>
+
+
+<?php
+  foreach ($cart as $p){
+    print "$cart[$p] <br />";
   }
  ?>
 <p>Shipping to:</p><br>
